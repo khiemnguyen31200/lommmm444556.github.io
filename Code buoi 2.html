@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Hỗ trợ các trang web đọc các bảng mã kí tự -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!-- Nhúng external CSS -->
+    <link: rel=" stylesheet" href="style.css">
+
+    <style>
+        /* cấu trúc 
+        selector {
+         Id
+         class
+         element
+        } 
+        */
+        p{
+            color:rebeccapurple;
+            font-size: 48px;
+        }
+        p#Welcome{
+            background-color: red;
+        }
+        #Welcome{
+         background-color: salmon;
+         text-align: center;
+         text-transform: capitalize;
+        }
+        .underline { 
+             text-decoration: underline ;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sử dụng inline CSS --> <!-- Độ ưu tiên Inline CSS > internal CSS > external CSS-->
+    <p style="font-weight: bolt; font-size: 24px; color: blue;">
+        <!-- Font size điều chỉnh kích thước chữ
+             Font weigh điều chỉnh độ đậm nhạt của chữ -->
+     Hôm nay là 30 tháng 11
+    </p>
+    <p id="Welcome" class="underline"> Chào mừng bạn Dũng</p>
+</body>
+</html>
