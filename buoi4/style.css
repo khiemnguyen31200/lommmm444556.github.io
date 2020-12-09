@@ -471,7 +471,9 @@ h2 {
 }
 footer {
     padding: 3rem 0 3rem 0;
-    line-height: 2.5em
+    line-height: 2.5em;
+    display: flex;
+    flex-direction: column;
 }
 
 footer h4 {
