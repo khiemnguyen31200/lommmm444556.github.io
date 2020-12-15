@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .animation {
+            background-color: teal;
+            width: 200px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            animation: tang-width 3s ease-in-out 0.5s infinite;
+            animation: change-color 1s  infinite alternate ;   
+        }
+
+        .heart{
+            animation: heart 1s ease-in-out  infinite;
+        }
+        @keyframes tang-width {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 500px;
+            }
+        }
+
+        @keyframes change-color {
+            0% {
+                background-color: teal;
+            }
+
+            20% {
+                background-color: violet;
+            }
+
+            40% {
+                background-color: springgreen;
+            }
+
+            60% {
+                background-color: tomato;
+            }
+        }
+        @keyframes heart{
+            0%{
+                transform: scale(0.5);
+            }
+            20%{
+                transform: scale(0.6);
+            }
+            37%{
+                transform: scale(0.5);
+            }
+            55%{
+                transform: scale(0.8);
+            }
+            73%{
+                transform: scale(0.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p class="animation">Animation</p>
+    <br>
+    <br>
+    <img class="heart" src="./1200px-Heart_corazón.svg.png" alt="anhtim">\
+    <p></p>
+</body>
+
+</html>
