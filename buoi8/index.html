@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="./main.js"></script>
+
+
+    <script>
+        alert('xin chào')
+        document.write("chào các bạn")// Ghi vào phần hiển thị của trình duyệt
+
+        console.log("hello world") // để ghi vào phần console của trình duyệt
+
+        const age1 = 40; // phải để const bắt đầu bằng một giá trị
+        console.log(age1)
+
+        let age; //  khởi tạo biến (khai báo biến)
+        console.log(age) // báo cáo biến
+        age = 35 // nhập giá trị cho biến
+        console.log(age); // xuất giá trị
+
+        let firstName = "Nguyễn"
+        let lastName = " Văn B"
+        let fullName = firstName + lastName;
+        console.log(fullName);
+
+        let mess = "\"Hà Nội\" hôm nay lạnh quá"// trong trường hợp có nháy kép nhồi nháy kép phải làm như dòng code này // dùng \n để xuống dòng
+            + "xin chào" // có thể dùng đấu "+" để cộng chuỗi
+        console.log(mess);
+        let fullName1 = `${firstName} ${lastName} năm nay ${2020 - 1992} tuổi`// có thể dùng "`" thay cho ""
+        console.log(fullName1)
+
+        let num1 = 10;
+        let num2 = 20;
+
+        console.log(typeof undefined)
+        console.log(typeof null)// bản chất của null là object
+
+        console.log(num1 + num2)
+        console.log(num1 - num2)
+        console.log(num1 * num2)
+        console.log(num1 / num2)
+        console.log(num1 % num2) // chia lấy phần du
+        console.log(num1 ** num2) // ** là dấu mũ
+        console.log(Math.sqrt(num1)) // Căn bậc 2
+        console.log(Math.ceil(1.1))
+        console.log(Math.round(1.5))
+        console.log(Math.round(Math.random() * 10000))// làm tròn số
+        console.log(Math.max(3, 2, 1, 1, 5, 63, 53))// tìm số lớn nhất
+        console.log(Math.min(3, 2, 1, 1, 5, 63, 53))// tìm số nhỏ nhất
+
+        console.log("" + 1 + 0)
+        console.log("4" - 2)
+        console.log("4px" - 2)
+        console.log(-7 / 0)// undefind là chưa có giá trị cho biến
+        console.log(null + 1)// null là một giá trị rỗng
+        console.log(undefined + 1)
+        console.log(typeof (7) + 1)
+        console.log(typeof "9" + 5)
+        console.log(true + true)
+        console.log("9" == 9)
+        console.log("9" === 9)
+        console.log(Math.round(0.1) + 0.2);
+        console.log(0.1 + 0.2);
+
+        // function - Định nghĩa
+        function sayHello(name) {
+            console.log("Xin chào" + name)
+        }
+        // Gọi function
+        sayHello(" Anh A") // truyền giá trị cụ thể người ta gọi đó là "đối số"
+
+        function sayHello(name, year) {
+            console.log(`Xin chào + ${name} năm nay ${2020 - year} tuổi`)
+        }
+        // Gọi function 
+        sayHello(" Anh A", 1996) // truyền giá trị cụ thể người ta gọi đó là "đối số"
+
+        function sum(a, b) { // function scope là biến chỉ có giá trị trong cái function đó 
+            let result = a * b
+            return result
+        }
+        let data = sum(10, 8);
+        console.log(data)
+        console.log(data == 20)
+
+        console.log(sum(1))
+
+        function str(name1) {
+            name1 = "Anh A"
+            return name1
+
+        }
+        let ten=str(`Anh A`)
+        console.log(ten)
+        let tuoi = 1996
+        console.log(`${ten} năm nay ${2020 - tuoi} tuổi`)
+
+        function number(a) {
+            let result = a ** 2
+            return result
+        }
+        let so = number(2);
+        console.log(so)
+
+        // scope được định nghĩa là một vòng đời của biến
+         let email = "abc@gmail.com"; // đây là biến scope globle
+
+         {// local  scope
+             let address = "Hà Nội"
+             console.log(address)
+         }
+    </script>
+</body>
+
+</html>
