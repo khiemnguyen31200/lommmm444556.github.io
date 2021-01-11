@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // Bài 1
+        function checkAscArr(arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    return false
+                }
+            }
+            return true
+        }
+        console.log(checkAscArr([1, 2, 3, 4]))
+        // // Bài 2
+        function checkAscArr1(arr) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (arr[i] < arr[i + 1]) {
+                    return false
+                }
+            }
+            return true
+        }
+        console.log(checkAscArr1([4, 3, 2, 1]))
+        // Bài 3
+        function checkAscArr2(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] >= arr[i + 1] || arr[i] % 2 > 0) {
+                    return false
+                }
+                else if (arr[i] == arr[arr.length - 1]) {
+                    return true;
+                }
+            }
+        }
+        console.log(checkAscArr2([0, 2, 4, 6, 8]))
+        // Bài 4
+        function checkAscArr3(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] <= arr[i + 1] || arr[i] % 2 == 0) {
+                    return false
+                }
+                else if (arr[i] == arr[arr.length - 1]) {
+                    return true;
+                }
+            }
+        }
+        console.log(checkAscArr3([7, 5, 3, 1]))
+        // Bài 5 
+        function fMaia(a) {
+            let Max = a[0]
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] > Max) {
+                    Max = a[i];
+                }
+            }
+            return Max
+        }
+        console.log(fMaia([1, 2, 9, 4, 45]))
+        // Bài 6
+        function fMiia(a) {
+            let Min = a[0]
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] <= Min) {
+                    Min = a[i];
+                }
+            }
+            return Min
+        }
+        console.log(fMiia([1, 2, 9, 4, 45]))
+        // Bài 7
+        function practice07(arr) {
+            let newArr = []
+            for (let i = 0; i < arr.length; i++) {
+                newArr.push(arr[i] % 2)
+            }
+            return newArr
+        }
+        console.log(practice07([1, 2, 3, 4, 4]))
+        // Bài 8
+        function rpstr(str) {
+            return str.repeat(10)
+        }
+        console.log(rpstr("a"))
+        // Bài 9
+        function str(str, n) {
+            let l = ""
+            for (let i = 0; i < n; i++) {
+                l = l + str + "-"
+            }
+            let k = l.slice(0, l.length - 1)
+            return k
+        }
+        console.log(strr1("a", 10))
+    </script>
+</body>
+
+</html>

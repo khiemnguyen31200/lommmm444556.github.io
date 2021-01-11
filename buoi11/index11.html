@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "Xin chào"
+        // IndexOf- Lastindexof
+
+        console.log(str.indexOf("in"))
+        console.log(str.indexOf("lo"))
+        console.log(str.lastIndexOf("lo"))
+
+        // Include 
+        console.log(str.includes("in"))
+        console.log(str.includes("lo"))
+
+        //slice -tách chuỗi( vi trí ban đầu, vị trí kết thúc)
+        console.log(str.slice(0, 5))
+        console.log(str.slice(6))
+        console.log(str.slice(str.length - 1))
+        console.log(str.slice(-5))
+        console.log(str.slice(-1))
+        //substring
+        console.log(str.substring(6))
+        console.log(str.substring(0, 5))
+        console.log(str.substring(str.length - 1))
+        //substr(vị trí bắt, độ dài
+        console.log(str.substr())
+        //In thường in hoa chữ
+        console.log(str.toUpperCase(1))
+        console.log(str.toLowerCase())
+
+        // Cộng chuỗi
+        console.log(str.concat(" abc", " haha", " hii"))
+        //Loại bỏ khoảng trăng ở đầu và cuối chuỗi
+        let str1 = " hihi   "
+        console.log(str1.trim())
+        // CharAt(n) tìm kiếm các chữ ở vị trí
+        console.log(str1.charAt(2))
+        // Phương thức chuyển từ chuỗi thành mảng
+        // split()
+        console.log(str.split(""))
+        console.log(str.split("o"))
+
+
+
+        //// Bài tập
+        // Bài 1 kiểm tra chuỗi có nằm trong chuỗi còn lại không
+        function strr(a, b) {
+            if (a.includes(b)) {
+                return true
+            } else
+                return false
+            // Cách 2
+            // return a.includes(b)
+        }
+        let chuoi = strr("hoho", "1234hoho")
+        console.log(chuoi)
+        //Bài 2 Viết function rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi
+        function strr1(c) {
+            if (c.length >= 8) {
+                let q = c.slice(0, 9)
+                return q.concat("...")
+            } else
+                return c
+        }
+        console.log(strr1("Xin chào tất cả các bạn"))
+        //Bài 3 Viết function có tác dụng biến 1 chuỗi thành chuỗi chỉ viết hoa từ đầu tiên
+        // function strr1(f) {
+        //     if (c.length >= 8) {
+        //         let q = c.substr(0, 5)
+        //         return q.concat("...")
+        //     } else
+        //         return c
+        // }
+
+        //Bài 4  Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết function có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang.
+
+
+        function strr2(str, n) {
+            let l = ""
+            for (let i = 0; i < n; i++) {
+                l = l + str + "-"
+            }
+            let k = l.slice(0, l.length - 1)
+            return k
+        }
+        console.log(strr2("a", 5))
+        
+
+
+
+    </script>
+</body>
+
+</html>

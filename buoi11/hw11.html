@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1 kiểm tra chuỗi có nằm trong chuỗi còn lại không
+        function strr(a, b) {
+            if (a.includes(b)) {
+                return true
+            } else
+                return false
+
+        }
+        let chuoi = strr("hoho", "1234hoho")
+        console.log(chuoi)
+        //Bài 2 Viết function rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi
+        function str2(c) {
+            if (c.length >= 8) {
+                let q = c.slice(0, 8)
+                return q.concat("...")
+            } else
+                return c
+        }
+        let chuoi2 = str2("Xin chào tất cả các bạn")
+        console.log(chuoi2)
+        //Bài 3 Viết function có tác dụng biến 1 chuỗi thành chuỗi chỉ viết hoa từ đầu tiên
+        function str(name1) {
+            let k = name1.toLowerCase()
+            m = k.charAt(0)
+            n = k.charAt(5)
+            q = k.charAt(10)
+            l = k.charAt(14)
+            w = k.charAt(18)
+            return `${m.toUpperCase()}hào ${n.toUpperCase()}ừng ${q.toUpperCase()}ến ${l.toUpperCase()}ới ${w.toUpperCase()}echmaster`
+        }
+        let ten = str("Chào Mừng đến vỚi techMaSteR")
+        console.log(ten)
+
+
+
+        //Bài 4  Cho 1 chuỗi và 1 số nguyên n > 1, hãy viết function có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang.
+        function strr2(str, n) {
+            let l = ""
+            for (let i = 0; i < n; i++) {
+                l = l + str + "-"
+            }
+            let k = l.slice(0, l.length - 1)
+            return k
+        }
+        console.log(strr2("a", 5))
+
+        //HWWW
+        //Bài 5 
+        let ten10 = strr5("Hello")
+        function strr5(name5) {
+            let m = name5.split("")
+            let k = m.reverse()
+            let q = k.join("")
+            return q
+        }
+
+        console.log(ten10)
+        // Bài 6
+        // function mirrow(arr5) {
+        //     let i = 0;
+        //     let q = arr5.((arr5.length - 1) - i)
+        //     for (let i = 0; i < arr5.length / 2; ++i) {
+        //         if (arr5[i] != arr5.arr5.length - 1 - i) {
+        //             return arr5
+        //         } else {
+        //             return false
+        //         }
+        //     }
+        // }
+        // console.log(mirrow("Race car"))
+        // Bài 7
+        function countvowel(arr) {
+            let array = arr.split("")
+            let count = 0;
+            for (let i = 0; i < array.length; ++i) {
+                if (array[i] == "a") {
+                    count++
+                } else if (array[i] == "o") {
+                    count++
+                } else if (array[i] == "e") {
+                    count++
+                } else if (array[i] == "u") {
+                    count++
+                } else if (array[i] == "i") {
+                    count++
+                }
+            }
+            return count
+        }
+
+        console.log(countvowel("Hello"))
+        // Bài 8
+        function strr8(o, b) {
+            if (o.slice(3) == b) {
+                return true
+            } else
+                return false
+        }
+        let chuoi8 = strr8("hello", "lo")
+        console.log(chuoi8)
+        //Bài 9
+
+        // Bài 10
+        function strr100(name100) {
+            let m = name100.split("")
+            let k = m.sort()
+            let q = k.join("")
+            return n
+        }
+        console.log(strr100("Hello world"))
+        // Bài 11
+
+    </script>
+</body>
+
+</html>

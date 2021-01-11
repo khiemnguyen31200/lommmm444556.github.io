@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4]
+        let pop = arr.pop()
+        console.log(pop)
+        console.log(arr)
+
+        let push = arr.push(4)
+        console.log(pop)
+        console.log(arr)
+
+        // reverse- chức năng  đổi ngược thứ tự chuỗi
+        let rever = arr.reverse()
+        console.log(rever)
+        // slide tách từ  các phần tử ra từ mảng ban đầu // tách ra thành một mảng mới
+        // chỉ xóa đúng vị trí yêu cầu
+        console.log(arr.slice(0, 3))
+        // Xóa vị trí ban đầu
+        console.log(arr.slice(1))
+        // không xóa phần tử nào
+        console.log(arr.slice())
+        //Indexof : Tìm kiếm 1 phần tử xem nó có nằm trong mảng hay không
+        //Nếu có trả về vị trí đầu tiên trong mảng
+        //Nếu không có trả về -1
+        console.log(arr.indexOf(3))
+        console.log(arr.indexOf(5))
+        //trả về vị trí của số 3 cuối cùng
+        console.log(arr.lastIndexOf(3))
+        // phương thức join chuyển từ mảng thành chuỗi
+        // "-" thêm các dấu gạch vào giữa các phần tử
+        console.log(arr.join("-"))
+
+        // Viết function kiểm tra số có nằm trong dãy không
+        function arr2(a, b) {
+            // Phải so  sanh với -1 vì index of sai luôn trả về giá trị "-1"
+            // != là khác 
+            if (a.indexOf(b) != -1) {
+                return true
+            } else
+                return false
+        }
+
+        let M = arr2([2, 4, 6, 8, 100], 500)
+        console.log(M)
+        // Viết chương trình ra số lớn thứ 2 trong mảng
+        function arrnumber(a) {
+            let max = a[0];
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] > max) {
+                    max = a[i];
+                }
+            }
+            console.log(max)
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] == max) {
+                    a.splice(i, 1)
+                }
+            }
+            console.log(a)
+            let max1 = a[0];
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] > max1) {
+                    max1 = a[i];
+                }
+            }
+            console.log(max1)
+        }
+        let acc = arrnumber([122, 3, 20, 100, 75])
+
+
+        
+
+    </script>
+</body>
+
+</html>

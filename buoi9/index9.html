@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = true;
+        console.log(a);
+        let b = false;
+        console.log(b)
+        console.log(!!a)
+
+        let c = 5;
+        console.log(Boolean(c))
+
+        let d = 5 < 4
+        console.log(Boolean(d))
+
+        console.log(Boolean(0))
+        console.log(Boolean(""))
+
+        console.log(true && true) //phép và (hội)
+        console.log(true || true) // phép hoặc (tuyển)
+
+        // câu lệnh điều kiện
+        let f = 6
+        if (f > 0) {
+            console.log("Đây là số dương")
+        }
+        // câu lệnh điều kiện ìf/else // nếu đúng thực hiện trong If còn sai thực hiện trong else
+        let g = 7
+        if (g > 0) {
+            console.log("Số dương")
+        } else {
+            console.log("Số âm")
+        }
+        // viết nhanh của if/else
+        g > 0 ? console.log("Số dương") : console.log("Số âm")
+        // câu lệnh điều kiện if/elseif/else
+        let q = 10
+        if (q > 0) {
+            console.log("Số dương")
+        } else if (q == 0) {
+            console.log("Số 0")
+        } else { // if/else if là các trường hợp có điều kiên còn else không có điều kiên
+            console.log("Số âm")
+        }
+        // Nhập một điểm hệ số bất kì -> điểm hệ chữ
+        function score(mark) {
+            if (mark >= 85) {
+                console.log("A")
+            } else if (70 <= mark && mark < 85) {
+                console.log("B")
+            } else if (40 <= mark && mark < 70) {
+                console.log("C")
+            } else {
+                console.log("D")
+            }
+        }
+        let point = score(Math.random(Math.random() * 1000))
+
+        //Viết một function kiểm tra số chẵn số lẻ
+        function sochan(n) {
+            if (n % 2 == 0) {
+                console.log("Đây là số chẵn nè")
+            } else {
+                console.log("Đây là số lẻ nè")
+            }
+        }
+        let indentnumber = sochan(7)
+        //Viết function kiểm tra số đó có đồng thời chia hết cho 3 và 5 không
+        function fnb(n) {
+            if (n % 3 == 0 && n % 5 == 0) {
+                console.log("Chia hết cho cả 3 và 5")
+            } else if (n % 3 == 0) {
+                console.log("Chỉ chia hết cho 3")
+            } else if (n % 5 == 0) {
+                console.log("Chỉ chia hết cho 5")
+            } else {
+                console.log(" Chả chia hết cho số nào cả")
+            }
+        }
+        let indennumber = fnb(18)
+        // Viết function nhập vào 3 số a,b,c kiểm tra c có bằng a+b không
+
+        function so(a, b, c) {
+            if (a + b == c) {
+                console.log("Done!!")
+            } else {
+                console.log("Error")
+            }
+        }
+        let number = so(2, 4, 5)
+        // Switch case 
+        let num = 3;
+        switch (num) {
+            case 1:
+                console.log("Một");
+                break //break khi thực hiện trong một trường hợp trong case xong thì thoát ra
+            case 2:
+                console.log("Hai")
+                break
+            case 3:
+            case 4: //có thể viết gộp hai trường hợp nếu muốn ra cùng cú pháp lệnh   
+                console.log("Ba")
+                break
+            default:
+                console.log("Không tìm thấy")
+                break
+        }
+        // sử dụng sw case để in ra các ngày trong tuần
+        let day = 10;
+        switch (day) {
+            case 0:
+                console.log("Chủ nhật");
+                break //break khi thực hiện trong một trường hợp trong case xong thì thoát ra
+            case 2:
+                console.log("Hai")
+                break
+            case 3:
+                console.log("Ba")
+                break
+            case 4:
+                console.log("Tư")
+                break
+            case 5:
+                console.log("Năm")
+                break
+            case 6:
+                console.log("Sáu")
+                break
+            case 7:
+                console.log("Bảy")
+                break
+
+            default:
+                console.log("Không tìm thấy")
+                break
+        }
+        // sử dụng sw case để in ra các mùa tương ứng
+        let month = 10;
+        switch (month) {
+            case 1:
+            case 2:
+            case 3:
+                console.log("Mùa Xuân");
+                break
+            case 4:
+            case 5:
+            case 6:
+                console.log("Mùa hè")
+                break
+            case 7:
+            case 8:
+            case 9:
+                console.log("Mùa thu")
+                break
+            case 10:
+            case 11:
+            case 12:
+                console.log("Mùa đông")
+                break
+            default:
+                console.log("Không tìm thấy")
+                break
+        }
+
+        // Vòng lặp 
+
+        for (let i = 1; i < 101; i++) //i++ là viết tắt của i = i+1
+        {
+            if (i == 5) {
+                break // đến giá trị thứ 5 thì dừng lại thoát ra ngoài vòng lặp
+            }
+            console.log(i);
+        }
+        //
+        for (let i = 1; i < 101; i++) //i++ là viết tắt của i = i+1
+        {
+            if (i % 2 == 1) {
+                continue // bỏ qua vòng lặp hiện tại nếu không thỏa mãn điều kiện nào đó
+            }
+            console.log(i);
+        }
+
+        // tính tổng số chẵn
+        let sum1 = 0
+        for (let c = 1; c < 11; c = c + 1) {
+            if (c % 2 == 0) {
+                sum1 = sum1 + c
+            }
+        }
+        console.log(sum1)
+        let sum2 = 0
+        for (let d = 1; d < 101; d = d + 1) {
+            if (d % 2 == 1) {
+                sum2 = sum2 + d
+            }
+        }
+        console.log(sum2)
+        let so1 = 0
+        for (let g = 1; g < 21; g = g + 1) {
+            if (g % 2 == 1) {
+                console.log("Số lẻ")
+            } else {
+                console.log("Số chẵn")
+            }
+        }
+        //Array(mảng) để lưu giữ nhiều phần tử có các kiểu dữ liệu khác nhau
+        // chỉ số bắt đầu từ 0 và kết thúc ở number.length-1
+        let number00 = [1, 2, 3, 4, "Hà Nội", 6, 7, true, false];
+        console.log(number00);
+        console.log(number00.length);
+        console.log(number00[4]);
+        // Thay đổi chỉ số trong dãy
+        number00[4] = "Hải Phòng"
+        console.log(number00);
+        //
+        console.log(number00[number00.length - 1])
+        // Push thêm một phần tử vào cuối mảng
+
+        // thêm giá trị 5 vào cuối mảng number
+        number00.push(5);
+        console.log(number00)
+        //Pop xóa giá trị cuối mảng
+        number00.pop();
+        console.log(number00)
+        //Unshift Thêm vào đầu mảng 
+        // thêm giá trị 0 vào đầu của mảng
+        number00.unshift(0)
+        console.log(number00)
+        //Xóa giá trị ở đầu mảng
+        number00.shift()
+        console.log(number00)
+        //Xóa hoặc thêm ở vị trí bất kì
+        //Sử dụng với mục đích xóa (vị trí bắt đầu, số phần tử cần xóa)
+        number00.splice(1, 1)
+        console.log(number00)
+        //Sử dungjvowis mục đích thêm phần tử
+        //(Vị trí đầu,số phần tử cần xóa,.. đây là các phầ tử muốn thêm vào)
+        number00.slice(0, 0, 10, 11, 12)
+        console.log(number00)
+
+        // Gộp hai mảng lại với nhau -dùng phương thức concat
+        let number3 = [3, 2, 1]
+        let number2 = number00.concat(number3)
+        console.log(number2)
+
+        //Duyệt mảng thông qua chỉ số của nó
+        let sum5 = 0
+        for (let k = 0; k < number3.length; k++) {
+            // console.log(number00[k])
+            sum5 = sum5 + number3[k]
+        }
+        console.log(sum5)
+
+        //HWW
+        //kiem tra xem co tang dan hay khong
+        function checkAscArr(arr) {
+            // arr.length-1 kiem soat phan tu cuoi day
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    return false
+                }
+            }
+            return true
+        }
+        console.log(checkAscArr([4, 2, 3, 4]))
+        // kiem tra mang giam dan
+        function checkAscArr(arr) {
+            // arr.length-1 kiem soat phan tu cuoi day
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i - 1]) {
+                    return false
+                }
+            }
+            return true
+        }
+        console.log(checkAscArr([4, 3, 2, 1]))
+        //bai 7
+        function practice07(arr) {
+            let newArr = []
+            for (let i = 0; i < arr.length; i++) {
+                newArr.push(arr[i] % 2)
+            }
+            return newArr
+        }
+        console.log(practice07([1, 2, 3, 4, 4]))
+
+
+        function rpstr(str) {
+            return str.repeat(10)
+        }
+        console.log(rpstr("a-"))
+        let maxArr = [1, 2, 3, 4, 5];
+        function findmax(a) {
+            let max = a[0]
+            for (let i = 0; i < maxArr.length; i++) {
+                if (a[i > max]) {
+                    max = a[i]
+                }
+            }
+            return max
+        }
+        let qq = findmax(maxArr)
+        console.log(qq)
+    </script>
+</body>
+
+</html>
