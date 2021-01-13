@@ -15,7 +15,6 @@
                 return true
             } else
                 return false
-
         }
         let chuoi = strr("hoho", "1234hoho")
         console.log(chuoi)
@@ -30,6 +29,7 @@
         let chuoi2 = str2("Xin chào tất cả các bạn")
         console.log(chuoi2)
         //Bài 3 Viết function có tác dụng biến 1 chuỗi thành chuỗi chỉ viết hoa từ đầu tiên
+        //Làm lại
         function str(name1) {
             let k = name1.toLowerCase()
             m = k.charAt(0)
@@ -101,6 +101,8 @@
 
         console.log(countvowel("Hello"))
         // Bài 8
+        //Làm lại dùng startswith nếu kiểm tra các phần tư băt đầu endswith thì ngược lại
+
         function strr8(o, b) {
             if (o.slice(3) == b) {
                 return true
@@ -116,10 +118,12 @@
             let m = name100.split("")
             let k = m.sort()
             let q = k.join("")
-            return n
+            return q
         }
         console.log(strr100("Hello world"))
         // Bài 11
+
+
 
     </script>
 </body>
