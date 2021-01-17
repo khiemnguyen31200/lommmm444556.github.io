@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Khai báo object rỗng
+        let objempty = {}
+        //Khai báo obj có giá trị
+        let user = {
+            name: 'Nguyễn Văn A',
+            age: 1992,
+            isStatus: true,
+            skill: ['PHP', 'JAVA', 'Golang]'],
+            address: {
+                city: 'Hà Nội',
+            },
+            sayhello: function () {
+                console.log("Xin chào các bạn")
+            },
+
+            changename: function (name) {
+                this.name = name
+            },
+
+            getAge: function () {
+                let q = 2021 - this.age
+                console.log(`tuổi của B là ${q} `)
+            }
+
+        }
+
+        // Lấy ra giá trị 
+        //Cách 1
+        console.log(user.name)
+        console.log(user.age)
+        console.log(user.address.city)
+        //Cách 2
+        console.log(user['name'])
+        console.log(user['skill'])
+
+        //Thay đổi giá trị
+        user.name = "Ngô văn B"
+        console.log(user.name)
+
+        //Thêm key mới
+        user.email = 'abc@gmail.com'
+        console.log(user.email)
+
+        //Xóa key 
+        delete user.email
+        console.log(user)
+
+        // Trình diễn hành động
+        user.sayhello()
+
+        user.getAge()
+        user.changename("Nguyễn Văn Hòa")
+        console.log(user.name)
+
+        //Method object
+        // Lấy ra danh sách key
+        console.log(Object.keys(user))
+        console.log(Object.values(user))
+
+        //Kiểm tra 1 key có tồn tại trong object hay không
+        console.log(user.hasOwnProperty('name'))
+        console.log(user.hasOwnProperty('name1'))
+
+
+        //Bài tập
+
+
+        let grades = [
+            { name: 'John', grade: 8, sex: 'M' },
+            { name: 'Sarah', grade: 12, sex: 'F' },
+            { name: 'Bob', grade: 16, sex: 'M' },
+            { name: 'Johnny', grade: 2, sex: 'M' },
+            { name: 'Ethan', grade: 4, sex: 'M' },
+            { name: 'Paula', grade: 18, sex: 'F' },
+            { name: 'DonaldTrump', grade: 5, sex: 'M' },
+            { name: 'Jennifer', grade: 13, sex: 'F' },
+            { name: 'Courtney', grade: 15, sex: 'F' },
+            { name: 'Jane', grade: 9, sex: 'F' }
+        ]
+        //Tìm thứ hạng trung bình của cả lớp
+        function avergrade(arr) {
+            let count = 0
+            for (let i = 0; i < arr.length; i++) {
+                count = count + arr[i].grade
+            }
+            return count / arr.length
+        }
+
+        console.log(avergrade(grades))
+
+        //Tìm thứ hạng trung bình của nam trong lớp
+        function avergradeinM(arr) {
+            let count = 0
+            let count1 = 0
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].sex == 'M') {
+                    count = count + arr[i].grade
+                    count1++
+                }
+            }
+            return count / count1
+        }
+        console.log(avergradeinM(grades))
+
+        // Tìm thứ hạng trung bình của nữ trong lớp
+        function avergradeinF(arr) {
+            let count = 0
+            let count1 = 0
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].sex == 'F') {
+                    count = count + arr[i].grade
+                    count1++
+                }
+            }
+            return count / count1
+        }
+        console.log(avergradeinF(grades))
+
+        //Tìm ra thứ tự thấp nhất của Nam trong lớp
+        function findMaxinM(arr) {
+            let min = arr[0].grade;
+            for (let i = 0; i < arr.length; i = i + 1) {
+                if (arr[i].grade < min && arr[i].sex == 'M') {
+                    min = arr[i].grade;
+                }
+            }
+            return min
+        }
+        console.log(findMaxinM(grades))
+
+        //Tìm thứ hạng của Nữ thấp nhất trong lớp
+
+        function findMimnnF(arr) {
+            let min = arr[0].grade;
+            for (let i = 0; i < arr.length; i = i + 1) {
+                if (arr[i].grade < min && arr[i].sex == 'F') {
+                    min = arr[i].grade;
+                }
+            }
+            return min
+        }
+        console.log(findMimnnF(grades))
+
+
+        //Tìm thứ hạng cao nhát cả lớp
+        function findMax(arr) {
+            let max = arr[0].grade;
+            for (let i = 0; i < arr.length; i = i + 1) {
+                if (arr[i].grade > max && arr[i].sex == 'F') {
+                    max = arr[i].grade;
+                }
+            }
+            return max
+        }
+        console.log(findMax(grades))
+
+        function sum(a, b) {
+            return a + b
+        }
+        let sum1 = (a, b) => { return a + b }
+        let sayhello = () => console.log("Xin Chào")
+        let sayhello1 = (name) => console.log(`Xin chào ${name}`)
+        console.log(sum1(3, 4))
+        sayhello()
+        sayhello1('Nguyễn Văn A')
+
+        let findmax = arr => {
+            //Tìm số lớn nhất
+
+        }
+        // ForEach
+        let number = [1, 2, 3, 4, 5];
+        let result = 0
+        number.forEach((value, index) => {
+            result += value
+        })
+        console.log(result)
+
+        //Sử dụng Map để duyệt mảng
+        //lặp qua, thao tác với các phần tử của mảng.Trả về mảng mới có độ dài = mảng ban đầu
+        let number1 = number.map(ele => ele * 2)
+        console.log(number1)
+
+
+        //filter === for - if
+
+        let number2 = number.filter(ele => ele > 2)
+        console.log(number2)
+
+        //Find trả về phần tử đầu tiên thỏa mãn điều kiện
+        let number3 = number.find(ele => ele > 2)
+        console.log(number3)
+
+        //Findindex trả về chỉ số của phần tử đầu tiên thỏa mãn điều kiện
+        let number4 = number.findIndex(ele => ele > 2)
+        console.log(number4)
+
+        //every : Trả về true nếu tất cả thỏa mãn điều kiện
+        // Một phần tử không thỏa mãn trả về false
+        let number5 = number.every(ele => ele > 0)
+        console.log(number5)
+
+        //Some chỉ cần một phần tử thỏa mãn trả về true
+        let number6 = number.some(ele => ele > 3)
+        console.log(number6)
+
+
+        //tìm chữ có độ dài lớn nhất trong mảng
+
+        let findmaxLengthinelement = arr => {
+            //Lấy ra mảng độ dài
+            let arrLength = arr.map(ele => ele.length)
+            let maxlength = Math.max(...arrLength)
+            return arr.filter(ele => ele.length == maxlength)
+        }
+
+        console.log(findmaxLengthinelement(['aba', 'aa', 'ad', 'c', 'vcd']))
+
+        // Loại bỏ các phần tử trùng nhau trong mảng
+        let removeDuplicates = arr => { return arr.filter((v, i) => arr.indexOf(v) == i) }
+        console.log(removeDuplicates([1, 2, 5, 2, 6, 2, 5]))
+
+        // Tìm số lớn thứ nhì 
+        let max2Numbers = arr => {
+            // remove duplicate
+            let newArr = removeDuplicates(arr)
+            let sortArr = newArr.sort((a, b) => b - a)
+            return sortArr[1]
+        }
+        console.log(max2Numbers([2, 1, 4, 3, 4]))
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
