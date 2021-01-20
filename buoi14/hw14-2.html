@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li id="li1">Item 1</li>
+        <li>Item 2</li>
+        <li id="li3">Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+    </ul>
+</body>
+<script>
+    let body = document.querySelector('body')
+    let ul1 = document.querySelector('ul')
+    let li4 = document.createElement('li')
+    li4.innerText = ' Item 8 '
+    ul1.appendChild(li4)
+    let li5 = document.createElement('li')
+    li5.innerText = ' Item 9 '
+    ul1.appendChild(li5)
+    let li6 = document.createElement('li')
+    li6.innerText = ' Item 10 '
+    ul1.appendChild(li6)
+    let li1 = document.getElementById('li1')
+    li1.style.color = 'red'
+    let li3 = document.getElementById('li3')
+    li3.style.backgroundColor = 'green'
+    let li44 = document.querySelector('li:nth-child(4)')
+    ul1.removeChild(li44)
+
+    let newli = document.createElement('li')
+    newli.innerText = 'New li'
+
+    li55 = document.querySelector('li:nth-child(4)')
+    ul1.insertBefore(newli, li55)
+
+    let input = document.createElement('input')
+    input.placeholder = 'xin mời bạn nhập vào'
+    document.body.appendChild(input)
+
+    let button = document.createElement('button')
+    button.textContent = 'Submit' 
+    document.body.appendChild(button)
+
+</script>
+
+</html>

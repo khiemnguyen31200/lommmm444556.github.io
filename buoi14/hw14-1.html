@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="text">Good night</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        let text123 = document.getElementById('text')
+        console.log(text123)
+        text123.style.color = "#777"
+        text123.style.fontSize = "2rem"
+        text123.innerHTML = "Tôi có thể làm <em> bất cứ điều gì </em> tôi muốn với JavaScript."
+
+        let ul3 = document.querySelector('ul')
+        let li3 = document.querySelector('li')
+
+        let li = document.getElementsByTagName('li')
+        for (i = 0; i < li.length; i++) {
+            li[i].style.color = 'blue'
+        }
+    
+    console.log(li)
+    </script>
+
+    <!-- DONE -->
+</body>
+
+</html>
