@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Cách 1 -->
+    <button onclick="sayhello()"> Click me </button>
+    <!-- Cách 2 -->
+    <button id="btn"> Click</button>
+    <!-- Cách 3 -->
+    <button id="btn011"> Click</button>
+<br>
+    <button id="btn001"> Click01</button>
+
+    <button id="btn002"> Click02</button>
+
+    <button id="btn003"> Click03</button>
+    
+    <script>
+        function sayhello(){
+            console.log("Hello")
+        }
+        let btn =document.getElementById('btn')
+        // btn.onclick = function(){
+        //     console.log("Hello1244")
+        // }
+
+        // Cách 2
+        btn.onclick = sayhello01
+
+        function sayhello01(){
+            console.log("Helloo 12345")
+        }
+        // Cách 3
+        let button = document.getElementById('btn011')
+        button.addEventListener('click', function(){
+            console.log("alo alo")
+        })
+        // bấm nút 3 chuyển màu nút 2 thành màu đỏ
+        let button2 = document.getElementById('btn002')
+        let button1 = document.getElementById('btn001')
+        let button3 = document.getElementById('btn003')
+
+        button3.addEventListener('click', function(){
+            button2.style.backgroundColor = 'red'})
+        // Bấm nút 2 tạo 1 thẻ p có nội dung bát kì
+        button2.addEventListener('click', function(){
+        let para = document.createElement('p')
+        para.innerText= '1234'
+
+        document.body.appendChild(para)
+
+        })
+
+        // sưj kiên mouse move
+
+        document.addEventListener('mousemove',function(){
+            console.log('mousemove')
+        })
+    </script>
+</body>
+</html>
