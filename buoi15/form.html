@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggle {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter Name" class="input">
+    <br>
+    <h1></h1>
+    <p>1243455</p>
+    <button id="btn001">hide</button>
+    <button class="btn"> Submit</button>
+    <div>
+        <label for="texture-selector">Choose a texture:</label>
+        <select id="texture-selector">
+            <option value="https://image.freepik.com/free-vector/memphis-seamless-patterns_9202-768.jpg">Memphis
+                Seamless</value>
+            <option value="https://image.freepik.com/free-vector/retro-styled-pattern-background_1048-6593.jpg">
+                Retro-styled</value>
+            <option value="https://image.freepik.com/free-vector/abstract-background-with-3d-pattern_1319-68.jpg">3D
+                Cubes</value>
+        </select>
+    </div>
+
+    <div id="texture-background" style="width: 400px; height: 400px"></div>
+    <script>
+        let btn = document.querySelector('.btn')
+        let input = document.querySelector('.input')
+        let h1 = document.querySelector('h1')
+
+
+        btn.addEventListener('click', function () {
+            let value = input.value
+            if (value == '') {
+                alert(" Nhập tên đi")
+                return
+            }
+            h1.innerText = value
+            input.value = ''
+            input.focus()
+        })
+        input.addEventListener('blur', function () {
+            let value = this.value
+            this.value = value.toUpperCase()
+        })
+
+        // Tạo 1 thẻ p có nội dung bất kỳ và 1 thẻ button sau đó ấn vào button thì toggle ẩn/hiện thẻ 
+        let para = document.querySelector('p')
+        let btn01 = document.querySelector('#btn001')
+        btn01.addEventListener('click', function () {
+            para.classList.toggle('toggle')
+            btn01.innerText = 'show'
+        })
+        //4. Lắng nghe sự kiện "change" của ô input. Thay đổi background-image của div = giá trị trong ô input
+        let select = document.querySelector('#texture-selector')
+        let bak = document.querySelector('#texture-background')
+        select.addEventListener('click', function () {
+            let value = this.value
+            bak.style.backgroundImage = `url(${value})`
+        })
+        //Thêm 1 nút "add" + 1 ô input để nhập text. Mỗi khi bấm nút thêm 1 thẻ <li> có nội dung là nội dung trong ô input vào cuối danh sách
+            
+    </script>
+</body>
+
+</html>

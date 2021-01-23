@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My page</title>
+</head>
+
+<body>
+    <h1 id="heading">Đây là thẻ heading</h1>
+    <p>Thẻ para 1</p>
+    <p class="para">Thẻ para 2</p>
+    <p class="para">Thẻ para 3</p>
+    <div class="box">
+        <ul>
+            <li>Thẻ li 1</li>
+            <li>Thẻ li 2</li>
+            <li>Thẻ li 3</li>
+            <li>Thẻ li 4</li>
+            <!-- 1234 -->
+        </ul>
+    </div>
+    <script>
+        // Truy câp thông qua Id
+        let heading = document.getElementById('heading')
+        console.log(heading)
+        // Truy câpj thông qua tab
+        let p = document.getElementsByTagName('p')
+        console.log(p)
+        console.log(p.length)
+        console.log(p[0])
+        console.log(p[1])
+
+        let h1 = document.getElementsByTagName('h1')
+        console.log(h1[0])
+
+        // Truy cập thông qua classname
+
+        let p_classname = document.getElementsByClassName('para')
+        console.log(p_classname)
+
+        // truy cập thông qua css seclector 
+        // chỉ trả về phần tử đầu tiên nó tìm thấy
+        let h1_css = document.querySelector('#heading')
+        console.log(h1_css)
+
+        let para_css = document.querySelector('.para')
+        console.log(para_css)
+
+        let para3 = document.querySelector('p:nth-child(4)')
+        console.log(para3)
+
+        let p_all = document.querySelectorAll('p')
+        console.log(p_all)
+
+        let box = document.querySelector('.box')
+        console.log(box.parentNode)
+        console.log(box.nextSibling)
+        //Anh em liền kề sau
+        console.log(box.nextElementSibling)
+        console.log(box.children)
+
+        let ul = document.querySelector('ul')
+        console.log(ul.childNodes)
+        console.log(ul.firstChild)
+        console.log(ul.children)
+
+        // get/set content 
+        // Có 3 cách để lấy ra nội dung
+
+        console.log(heading.innerHTML)
+        console.log(heading.innerText)
+        console.log(heading.textContent)
+
+        // Trả về kết quả y nguyên bên trong thẻ
+        //Trả về tên thẻ và nội  dung của thẻ
+        console.log(ul.innerHTML)
+        // inntext không lấy ra được nội dung của thẻ ẩn
+        console.log(ul.innerText)
+        // textContent có thể hiện nội dung cuả thẻ ẩn
+        console.log(ul.textContent)
+        // inner HTML có thể chèn thẻ thêm vào       
+        heading.innerHTML = "Xin chào"
+        //innertext chỉ có thể chèn thêm chữ
+        heading.innerText = "Chào"
+
+        // Thay đổi style của phần tử
+        // Thay dổi màu chữ
+        heading.style.color = "red"
+        // Thay đôir màu nền
+        heading.style.backgroundColor = "blue"
+
+        // Tạo phần tủ dom 
+        // Tao ra thẻ para4
+        let para4 = document.createElement('p')
+        para4.innerText = 'Đây là thẻ Para4'
+        para4.id = 'para4'
+        para4.className = 'para'
+
+        console.log(para4)
+
+        //Thêm thẻ P vào phần đâuf tiên của body
+        document.body.prepend(para4)
+
+        //thêm một thẻ p vào phía cuối cuả body
+        document.body.appendChild(para4)
+
+        // Tạo thẻ li và chèn vào đâu ul
+        let li4 = document.createElement('li')
+        li4.innerText = ' Thẻ li 5 '
+        ul.appendChild(li4)
+
+        // chèn vào giữa của mảng 
+        // chèn một cái thẻ p vào giữa thẻ một và thẻ 2
+
+        let newPara = document.createElement('p')
+        newPara.innerText = 'New Para'
+
+        let para2 = document.querySelector('.para')
+        document.body.insertBefore(newPara, para2)
+        // chenf li vaof giưã thẻ li3 và 4
+        let newPara1 = document.createElement('li')
+        newPara1.innerText = 'New li'
+
+        li4 = document.querySelector('li:nth-child(4)')
+        ul.insertBefore(newPara1, li4)
+
+
+        // Xoas một phần tử
+        let para1 = document.querySelector('p')
+
+        document.body.removeChild(para1)
+
+        // Thay thế một phần tử
+
+        let link = document.createElement('a') // thể hiện thuộc tinh cua the
+        link.innerText = 'Google'
+        link.href = 'https:google.com'
+        link.target = '_blank'
+
+        document.body.replaceChild(link, para2)
+        
+
+        // tạo ra một thẻ input thay thế cho thẻ para3
+        let input =document.createElement('input')
+        input.placeholder = 'xin mời bạn nhập vào'
+        
+
+        document.body.replaceChild(input, para3)
+
+        // copy
+         let ucopy = ul.cloneNode(true)
+         document.body.appendChild(ucopy)
+
+        //Truy cập cục bộ 
+
+        // let box = document.querySelector('.box')
+        let liClass = box.getElement()
+
+
+
+    </script>
+</body>
+
+</html>
