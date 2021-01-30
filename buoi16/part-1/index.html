@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="game">
+        <div class="game-container">
+            <h2>Thử tài tính toán nào bạn ơi!</h2>
+            <div class="game-info">
+                <p class="score-box">Score : <span class="score"></span></p>
+                <p class="time-box">Time : <span class="time"></span></p>
+                <p class="high-score-box">High Score: <span class="high-score"></span></p>
+            </div>
+            <div class="main">
+                <div id="primary-number">7</div>
+                <div id="operator">+</div>
+                <div id="secondary-number">10</div>
+                <div id="equal">=</div>
+                <div>
+                    <input type="text" id="guess">
+                </div>
+            </div>
+        </div>
+        <div class="lb-wrapper">
+            <h2>Bảng xếp hạng</h2>
+            <div class="lb-list">
+                <div class="list-header">
+                    <div class="list-rank"></div>
+                    <div class="list-info">Học viên</div>
+                    <div class="list-score">Điểm</div>
+                </div>
+                <div class="list-player-wrapper">
+                    <div class="list-player">
+                        <!-- RENDER OTHER RANK STUDENT -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
