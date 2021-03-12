@@ -1,0 +1,70 @@
+body{
+background: #2C3E50;
+}
+.container{
+margin-left: 14%;
+position: absolute;
+width: 500px;
+height: 422px;
+left: 470px;
+top: 301px;
+}
+.container-inner{
+background: white;
+box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+position: absolute;
+width: 460px;
+height: 400px;
+left: 20px;
+top: 50px;
+padding: auto;
+}
+#text{
+width: 300px;
+height: 40px;
+left: 570px;
+top: 629px;
+margin-left: 15%;
+
+}
+h2{
+    margin-left: 6%;
+    padding-top: 5px;
+    width: 400px;
+    height: 45px;
+    text-align: center;
+    border-color: darkgreen;
+    background-color: darkorange;
+}
+#word{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.time-container{
+    height: 51px;
+    width: 150px;
+    color:  red;
+    background-color: green;
+    margin-left: 5px;padding: auto;
+}
+.score-container{
+    height: 51px;
+    width: 150px;
+    color:  red;
+    background-color: green;
+    margin-left: 5px;
+}
+#time{
+    color: grey;
+
+}
+#score{
+    color: red;
+}
+.option{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
