@@ -3,6 +3,12 @@ let inputEl = document.getElementById('text')
 let timeEl = document.getElementById('time')
 let wordEl = document.getElementById('word')
 let scoreEl = document.getElementById('score')
+let btnStartGame = document.getElementById('btn-start-game')
+let level = document.getElementById('level')
+let startGameEle = document.querySelector('#start-game')
+let gameEle = document.querySelector('.container')
+let endGameEle = document.querySelector('#end-game-container')
+let endgamebtn = document.querySelector('#btn-reload-game')
 let words = [
     'write',
     'read',
@@ -10,17 +16,36 @@ let words = [
     'sleep',
     'eye',
 ]
+let time
 let word
-let time = 10
 let score = 0
 let interval
+btnStartGame.addEventListener('click', function () {
+    level = level.value
+    startGameEle.style.display = 'none'
+    gameEle.style.display = 'flex'
+    if (level == 'easy') {
+        
+        time = 30
+        
+    } else if (level == 'medium') {
+        
+        time = 20
+
+    } else if (level == 'hard') {
+        
+        time = 10
+    }
+    addWordToDom()
+    interval = setInterval(updateTime, 1000)
+})
 //Xử lí gõ phím
 inputEl.addEventListener('input', function () {
     let value = inputEl.value
     let characters = document.querySelectorAll('#word span')
     if (!word.startsWith(value)) {
         wordEl.style.backgroundColor = 'red'
-        
+
     } else {
         wordEl.style.backgroundColor = 'transparent'
 
@@ -54,20 +79,21 @@ function addWordToDom() {
 function updateTime() {
     time--
     timeEl.innerText = `${time}s`
-    if (time <= 5) {
-        timeEl.style.color = 'blue'
-
-    } else {
-        timeEl.style.color = 'orange'
-    }
-    if (time == 0)
+    if (time == 0) {
         clearInterval(interval)
+        gameEle.style.display = 'none'
+        endGameEle.style.display = 'flex'
+        document.querySelector('.score').innerText = score
+
+    }
 }
 
 function UpadateScore() {
     score++
     scoreEl.innerText = score
 }
-interval = setInterval(updateTime, 1000)
 
-window.onload = addWordToDom
+
+endgamebtn.addEventListener('click', function () {
+    window.location.reload() 
+})

@@ -80,7 +80,7 @@ function getOptionSelected() {
     }
 }
  
-// // set data
+ // set data
 function setDatatoLocalStorage(todos){
     localStorage.setItem("todos",JSON.stringify(todos))
     RenderUI(todos)
