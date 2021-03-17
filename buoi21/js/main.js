@@ -1,7 +1,7 @@
-let nameplayer1El = document.getElementById('name-1')
-let nameplayer2El = document.getElementById('name-2')
-let scoreplayer1El = document.getElementById('score-1')
-let scoreplayer2El = document.getElementById('score-2')
+let nameplayer1El = document.getElementById('name-0')
+let nameplayer2El = document.getElementById('name-1')
+let scoreplayer1El = document.getElementById('score-0')
+let scoreplayer2El = document.getElementById('score-1')
 let currscoreplayer1El = document.getElementById('current-0')
 let currscoreplayer2El = document.getElementById('current-1')
 let dice1 = document.getElementById('dice-1')
@@ -9,6 +9,10 @@ let dice2 = document.getElementById('dice-2')
 let btnlacxucxac = document.querySelector('.btn-roll')
 let activePlayer = 0
 let btnsavepoint = document.querySelector('.btn-hold')
+let player1panel = document.querySelector('.player-0-panel')
+let player2panel = document.querySelector('.player-1-panel')
+let scoreinput = document.querySelector('.final-score')
+let btnnew = document.querySelector('.btn-new')
 
 //Part-2
 function init() {
@@ -20,6 +24,8 @@ function init() {
     currscoreplayer2El.innerText = 0
     dice1.style.display = "none"
     dice2.style.display = "none"
+
+
 }
 window.onload = init()
 //Part 3+4
@@ -31,26 +37,54 @@ btnlacxucxac.addEventListener('click', function () {
     dice1.style.display = "block"
     dice2.style.display = "block"
     if (number1 != 1 && number2 != 1) {
+
         lastscore = document.getElementById(`current-${activePlayer}`).innerText = number1 + number2 + Number(document.getElementById(`current-${activePlayer}`).innerText)
 
     } else {
         if (activePlayer == 0) {
             activePlayer = 1
-            currscoreplayer1El.innerText = 0
-
-
         } else {
-
             activePlayer = 0
-            currscoreplayer2El.innerText = 0
+        }
+        currscoreplayer1El.innerText = 0
+        currscoreplayer2El.innerText = 0
+
+        player1panel.classList.toggle('active')
+        player2panel.classList.toggle('active')
+    }
+})
+//Part 5
+
+btnsavepoint.addEventListener('click', function () {
+    if (activePlayer == 0) {
+        scoreplayer1El.innerText = `${Number(document.getElementById(`score-${activePlayer}`).innerHTML) + Number(document.getElementById(`current-${activePlayer}`).innerHTML)}`
+    } else {
+        scoreplayer2El.innerText = `${Number(document.getElementById(`score-${activePlayer}`).innerHTML) + Number(document.getElementById(`current-${activePlayer}`).innerHTML)}`
+    }
+    currscoreplayer1El.innerText = 0
+    currscoreplayer2El.innerText = 0
+    dice1.style.display = "none"
+    dice2.style.display = "none"
+    if (Number(document.getElementById(`score-${activePlayer}`).innerText) >= Number(scoreinput.value)) {
+        document.getElementById(`name-${activePlayer}`).innerText = 'WINNER';
+        document.getElementById(`player-${activePlayer}`).classList.add('winner');
+    } else {
+        if (activePlayer == 0) {
+            activePlayer = 1
+            player2panel.classList.toggle('active')
+            player1panel.classList.remove('active')
+        } else {
+            activePlayer = 0
+            player1panel.classList.toggle('active')
+            player2panel.classList.remove('active')
         }
     }
 })
-btnsavepoint.addEventListener('click', function () {
-    if (activePlayer = 0) {
-        scoreplayer1El.innerText = `${lastscore}`
-    } else {
-        scoreplayer2El.innerText = `${lastscore}`
 
-    }
+btnnew.addEventListener('click', function () {
+    window.location.reload()
 })
+
+
+
+
