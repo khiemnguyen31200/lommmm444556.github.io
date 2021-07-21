@@ -52,7 +52,7 @@ public class App {
                     if (i == 1 || j == 1 || i == a || j == b) {
                         System.out.printf("*");
                     } else {
-                        System.out.printf(" ");
+                        System.out.printf("*");
                     }
                 }
                 System.out.printf("\n");
