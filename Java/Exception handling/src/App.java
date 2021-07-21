@@ -11,29 +11,29 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            // System.out.println("Nhập chiều cao (m) ");
-            // height = scanner.nextDouble();
-            // if (height <= 0) {
-            //     System.out.println("Vui lòng nhập lại");
-            //     height = scanner.nextDouble();
-            // }
-            // System.out.println("Nhập cân nặng (kg)");
-            // weight = scanner.nextDouble();
-            // if (weight <= 0) {
-            //     System.out.println("Vui lòng nhập lại");
-            //     weight = scanner.nextDouble();
-            // }
-            // double bmi = weight / Math.pow(height, 2);
-            // if (bmi < 18.5) {
-            //     System.out.println(bmi);
-            //     System.out.println("Bạn đang gầy");
-            // } else if (bmi >= 18.5 && bmi < 25) {
-            //     System.out.println(bmi);
-            //     System.out.println("Bạn đang cân đối");
-            // } else if (bmi > 25) {
-            //     System.out.println(bmi);
-            //     System.out.println("Bạn đang thừa cân");
-            // }
+            System.out.println("Nhập chiều cao (m) ");
+            height = scanner.nextDouble();
+            if (height <= 0) {
+                System.out.println("Vui lòng nhập lại");
+                height = scanner.nextDouble();
+            }
+            System.out.println("Nhập cân nặng (kg)");
+            weight = scanner.nextDouble();
+            if (weight <= 0) {
+                System.out.println("Vui lòng nhập lại");
+                weight = scanner.nextDouble();
+            }
+            double bmi = weight / Math.pow(height, 2);
+            if (bmi < 18.5) {
+                System.out.println(bmi);
+                System.out.println("Bạn đang gầy");
+            } else if (bmi >= 18.5 && bmi < 25) {
+                System.out.println(bmi);
+                System.out.println("Bạn đang cân đối");
+            } else if (bmi > 25) {
+                System.out.println(bmi);
+                System.out.println("Bạn đang thừa cân");
+            }
 
             System.out.println("Nhập vào chiều dài của hình chữ nhật (DVDD)");
             a = scanner.nextDouble();
