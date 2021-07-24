@@ -1,0 +1,14 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Users\\khiem nguyen\\OneDrive - Nuce\\Máy tính\\gson-2.8.7-sources.jar",
+            "c:\\Lib\\gson-2.8.7-sources.jar",
+            "c:\\Lib\\json-simple-1.1.1 (1).jar",
+            "gson-2.8.7.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\khiem nguyen\\OneDrive - Nuce\\Máy tính\\json-simple-1.1.1 (1).jar"
+        ]
+    }
+}
