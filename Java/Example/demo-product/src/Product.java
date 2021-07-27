@@ -1,14 +1,14 @@
 import java.text.DecimalFormat;
 
 public class Product {
-    private String id;
+    private long id;
     private String name;
     private Category category;
     private long amount;
     private long price;
     private long amountSale;
     
-    public Product(String id, String name, Category category, long amount, long price, long amountSale) {
+    public Product(long id, String name, Category category, long amount, long price, long amountSale) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -17,11 +17,11 @@ public class Product {
         this.amountSale = amountSale;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -66,13 +66,10 @@ public class Product {
     }
 
     public static String formatMoney(long money){
-        DecimalFormat formatter = new DecimalFormat("###,###,##0.00");
-        //100000->100,000.00
+        DecimalFormat formatter = new DecimalFormat("###,###,##0.00 VND");
         return formatter.format(money);
         
     }
-    
-
 
     @Override
     public String toString() {

@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Function {
-    public void Start() {
-        Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
+    public void Start() {  
         MenuList.Menubar();
         int choose = scanner.nextInt();
         if (choose>7){

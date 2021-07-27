@@ -1,12 +1,13 @@
 public class Menu {
     public static void mainMenu(){
         System.out.println("1 - Xem thông tin sản phẩm");
-        System.out.println("2 - Thêm sản phẩm mới");
-        System.out.println("3 - Tìm sản phẩm theo mã sản phẩm");
-        System.out.println("4 - Tìm sản phẩm theo tên");
-        System.out.println("5 - Xem sản phẩm và số lượng bán được");
-        System.out.println("6 - Liệt kê loại sản phẩm và số lượng sản phẩm thuộc loại đó");
+        System.out.println("2 - In danh sách sản phẩm có giá trên 10.000");
+        System.out.println("3 - Đếm số sản phẩm có số lượng bán từ 50 trở lên");
+        System.out.println("4 - Liệt kê sản phẩm dựa theo loại sản phẩm");
+        System.out.println("5 - Sắp xếp sản phẩm theo số lượng bán được");
+        System.out.println("6 - Đưa ra sản phẩm bán được nhiều nhất");
         System.out.println("7 - Sắp xếp sản phẩm theo tên");
+        System.out.println("8 - Vào mục cài đặt thông tin sản phẩm");
         System.out.println("0 - Thoát chương trình");
         System.out.println("Lựa chọn của bạn là: ");
 
@@ -15,8 +16,24 @@ public class Menu {
     public static void secondMenu(){
         System.out.println("1 - Sửa thông tin sản phẩm");
         System.out.println("2 - Xoá sản phẩm");
-        System.out.println("0 - Quay về trang chủ");
+        System.out.println("3 - Quay về trang chủ");
+        System.out.println("0 - Exit");
         System.out.println("Lựa chọn của bạn là: ");
     }
-    
+
+    public static void chooseCategory() {
+        System.out.println("Chọn danh mục: ");
+        System.out.println("1 - Food");
+        System.out.println("2 - House ware");
+        System.out.println("3 - Cosmetics");
+        System.out.println("4 - Fashion");
+        System.out.println("5 - Others");
+        System.out.println("Lựa chọn của bạn là: ");
+    }
+    public static void MenuSelection(){
+        System.out.println("Chào mừng bạn đến với chương trình quản lí bán hàng: ");
+        System.out.println("1 - Mainmenu");
+        System.out.println("2 - Submenu");
+        System.out.println("Lựa chọn của bạn là: ");
+    }
 }
