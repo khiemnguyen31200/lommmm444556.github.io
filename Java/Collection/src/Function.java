@@ -5,6 +5,11 @@ public class Function {
         Scanner scanner = new Scanner(System.in);
         MenuList.Menubar();
         int choose = scanner.nextInt();
+        if (choose>7){
+            System.out.println("Try again");
+            System.out.println("Please enter number from 1 to 7 ");
+            Start();
+        }
         ProductRepos productRepos = new ProductRepos();
         productRepos.addProduct();
         int id;
