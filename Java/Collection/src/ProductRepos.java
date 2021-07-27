@@ -129,7 +129,7 @@ public class ProductRepos {
         
         Map<Integer, String> list = new HashMap<>();
         for (Product product : repons) {
-            list.put(product.getId(), product.getProductName() + " - " + "Sold product: " + product.getProductQuantity());
+            list.put(product.getId(), product.getProductName() + " - " + "Sold products: " + product.getSellQuantity());
         }
 
         for (Map.Entry<Integer, String> entry : list.entrySet()) {
@@ -147,7 +147,7 @@ public class ProductRepos {
             }
         }
         for (Map.Entry<Category, Integer> entry : list.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue() + "product");
+            System.out.println(entry.getKey() + ": " + entry.getValue() + " products");
         }
     }
 }
