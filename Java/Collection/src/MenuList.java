@@ -5,6 +5,7 @@ public class MenuList {
         System.out.println("2 - House ware");
         System.out.println("3 - Cosmetics");
         System.out.println("4 - Fashion");
+        System.out.println("5 - Others");
     }
     public static void Menubar() {
         System.out.println("Please choose your request");

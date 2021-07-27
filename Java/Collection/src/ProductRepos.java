@@ -35,6 +35,8 @@ public class ProductRepos {
                         
                     case 4:
                         return category = Category.FASHION;
+                    case 5:
+                        return category = Category.OTHERS;
                         
                     default:
                         throw new ArithmeticException();
