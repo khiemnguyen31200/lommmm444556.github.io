@@ -1,24 +1,15 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+
+import java.util.ArrayList;
 import java.util.List;
-import java.lang.reflect.Type;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+
 
 public class Repository {
     public List<User> users;
     public List<User> getData(){
-        try {
-            FileReader reader = new FileReader("acount.json");
-
-            // Chuyển từ JSON text -> object
-            Type objectType = new TypeToken<List<User>>() {
-            }.getType();
-            users = new Gson().fromJson(reader, objectType);
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return users; 
+        users = new ArrayList<>();
+        users.add(new User(1,"user1","abc@gmail.com","ABCD"));
+        users.add(new User(2,"user2","abc2@gmail.com","ABCDf"));
+        users.add(new User(3,"user3","abc3@gmail.com","ABCDg"));
+        return users;
     }
 }
