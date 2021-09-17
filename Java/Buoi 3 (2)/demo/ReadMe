@@ -1,0 +1,23 @@
+1.	Tạo ra folder Model -> Tạo ra class Book.java
+ 
+2.Tạo ra folder Reponsitory -> Tạo ra Abstrac class DAO.java
+ 
+	Tạo ra class BookDAO.java mở rông class DAO.java
+ 
+3.	Tạo ra thư mục Controller -> Tạo ra ServerController.java
+ 	Tạo ra RESTController.java
+ 
+ 
+4.	Khởi chạy chương trình 
+ 
+4.1	Kiểm thử qua postman
+4.1.1	Phương thức Get
+ 
+
+ 
+4.1.2. Phương thức Post
+ 
+4.1.3.	Lệnh Put 
+ 
+4.1.4.	Lệnh Xóa
+ 
