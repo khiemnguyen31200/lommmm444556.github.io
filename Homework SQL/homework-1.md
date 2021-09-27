@@ -17,6 +17,8 @@
 
 
 ![Kết quả tạo bảng](https://github.com/lommmm444556/lommmm444556.github.io/blob/master/Homework%20SQL/1/1-.PNG)
+
+
 ##Thêm yếu tố khóa chính vào trường id 
 
 
