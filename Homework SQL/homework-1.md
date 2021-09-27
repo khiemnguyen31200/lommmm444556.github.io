@@ -4,7 +4,7 @@
 
 
 
-    ![Tạo bảng](https://github.com/lommmm444556/lommmm444556.github.io/blob/master/Homework%20SQL/1/Capture%20-%201.PNG)
+![Tạo bảng](https://github.com/lommmm444556/lommmm444556.github.io/blob/master/Homework%20SQL/1/Capture%20-%201.PNG)
 
 
 
