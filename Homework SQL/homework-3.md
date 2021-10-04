@@ -3,6 +3,7 @@
 CREATE DATABASE Library;
 ```
 2. Tạo bảng
+
 2.1 Tạo bảng sách
 ```sql
 CREATE TABLE book(
