@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 import com.example.thymleaf.model.Book;
 import com.example.thymleaf.model.bookform.bookCreated;
 import com.example.thymleaf.model.bookform.bookMapper;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 
