@@ -1,5 +1,7 @@
 # I. Tạo cơ sở dữ liệu (Dùng lại cơ sở dữ liệu )
 
+Tạo bảng và tạo liên kết
+
 https://github.com/lommmm444556/lommmm444556.github.io/blob/master/Homework%20SQL/homework-3.md
 
 Cơ sở dữ liệu trên em có thêm phần số lượng vào table book như cơ sở dự liệu dưới đây.
@@ -24,7 +26,7 @@ INNER JOIN category on category.id = book_category.id_category WHERE category_na
 
 ![1](./final/2.PNG)
 
-3. Đến số lần tái bản quyển sách bất kì
+3. Đếm số lần tái bản quyển sách bất kì
 ```sql
 SELECT title,COUNT(title) as times from book INNER join republished on republished.id_book = book.id WHERE book.title = 'tat den';
 ```
