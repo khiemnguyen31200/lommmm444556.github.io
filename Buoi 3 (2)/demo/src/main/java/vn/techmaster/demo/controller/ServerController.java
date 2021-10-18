@@ -17,6 +17,6 @@ public class ServerController {
     @GetMapping("/books")
     public String listAll(Model model) {
         model.addAttribute("bookList", bookDAO.getall());
-        return "bookPage";
+        return "helloworld";
     }
 }
