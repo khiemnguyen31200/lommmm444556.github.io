@@ -1,9 +1,9 @@
-package com.example.demo.Config;
+package com.example.demo.config;
+
+import com.example.demo.repository.EmployeeDao;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.example.demo.Repository.EmployeeDao;
 @Configuration
     public class RepoConfig {
     

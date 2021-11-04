@@ -1,57 +1,80 @@
-package com.example.demo.Model;
+package com.example.demo.model;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Employee {
-   int id; 
-   String first_name;
-   String last_name;
-   String email;
-   String id_card;
-   
-public Employee() {
-}
-public Employee(int id, String first_name, String last_name, String email, String id_card) {
-    this.id = id;
-    this.first_name = first_name;
-    this.last_name = last_name;
-    this.email = email;
-    this.id_card = id_card;
-}
-public int getId() {
-    return id;
-}
-public void setId(int id) {
-    this.id = id;
-}
-public String getFirst_name() {
-    return first_name;
-}
-public void setFirst_name(String first_name) {
-    this.first_name = first_name;
-}
-public String getLast_name() {
-    return last_name;
-}
-public void setLast_name(String last_name) {
-    this.last_name = last_name;
-}
-public String getEmail() {
-    return email;
-}
-public void setEmail(String email) {
-    this.email = email;
-}
-public String getId_card() {
-    return id_card;
-}
-public void setId_card(String id_card) {
-    this.id_card = id_card;
-}
-public boolean matchWithKeyword(String keyword) {
-    String keywordLowerCase = keyword.toLowerCase();
-    return (first_name.toLowerCase().contains(keywordLowerCase) || 
-      last_name.toLowerCase().contains(keywordLowerCase)|| 
-      email.toLowerCase().contains(keywordLowerCase)|| 
-      id_card.toLowerCase().contains(keywordLowerCase));
-  }
+    @JsonIgnore
+    private int id;
+    @Size(min = 5, max = 30, message = "Name must between 5 and 30")
+    private String firstName;
+    @Size(min = 5, max = 30, message = "Name must between 5 and 30")
+    private String lastName;
+    @Email(message = "Not valid email")
+    private String email;
+    private String idCard;
+
+    public Employee() {
+    }
+
+    public Employee(int id, @Size(min = 5, max = 30, message = "Name must between 5 and 30") String firstName,
+            @Size(min = 5, max = 30, message = "Name must between 5 and 30") String lastName, @Email(message = "Not valid email") String email,
+            String idCard) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.idCard = idCard;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getIdCard() {
+        return idCard;
+    }
+
+    public void setIdCard(String idCard) {
+        this.idCard = idCard;
+    }
+
+    public String fullName() {
+        return firstName + " " + lastName;
+    }
+
+    public boolean matchWithKeyword(String keyword) {
+        String keywordLowerCase = keyword.toLowerCase();
+        return (fullName().toLowerCase().contains(keywordLowerCase) || email.toLowerCase().contains(keywordLowerCase));
+    }
 }

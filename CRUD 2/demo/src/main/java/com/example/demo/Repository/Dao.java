@@ -1,4 +1,4 @@
-package com.example.demo.Repository;
+package com.example.demo.repository;
 
     import java.util.List;
     import java.util.ArrayList;
@@ -22,6 +22,8 @@ package com.example.demo.Repository;
       public abstract void delete(T t);  
 
       public abstract List<T> searchByKeyword(String keyword);
+
+      public abstract List<T> sortByOrder(List<T> list, String order);
     }
     
 
